@@ -5,7 +5,7 @@ import java.util.ArrayList;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-
+/*
         System.out.println("---INICIANDO UDITVERSUM");
         //MAla practica: toda la logica de negocio tirada al Main
         //los diamanres <> obligan a que la lista solo acepten episodios
@@ -31,5 +31,11 @@ public class Main {
         long totalSegundos = (fin - inicio)/1000;
 
         System.out.println(("tiempo total: " + totalSegundos + " Segundos de bloqueo"));
+*/
+
+            Plataforma plataforma = new Plataforma(new ArrayList<>());
+            plataforma.agregarEpisodio(null);
+            plataforma.procesarCatalogo();
+
+        }
     }
-}
