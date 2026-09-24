@@ -1,17 +1,35 @@
 package org.example;
-
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        System.out.println("---INICIANDO UDITVERSUM");
+        //MAla practica: toda la logica de negocio tirada al Main
+        //los diamanres <> obligan a que la lista solo acepten episodios
+        ArrayList<Episode>catalogo = new ArrayList<>();
+
+        catalogo.add(new Episode("Diseño 3D -Intro", 45));
+        catalogo.add(new Episode("Animacion", 60));
+        catalogo.add(new Episode("Texturas", 50));
+
+        //Medicion tiempo
+        //long se usa porque milisegundos  son desde 1970 forman un numero tan gigantesco que no entra en la memoria del int
+
+        long inicio = System.currentTimeMillis();
+
+        for(Episode ep : catalogo){
+            ep.procesar(); // Aqui ocurre el bloqueo de dos segundos
         }
+
+        long fin = System.currentTimeMillis();
+
+        //Resultado: Restamos fin menos inicio y diviimos entre mil (segundos)
+
+        long totalSegundos = (fin - inicio)/1000;
+
+        System.out.println(("tiempo total: " + totalSegundos + " Segundos de bloqueo"));
     }
 }
