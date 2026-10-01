@@ -88,7 +88,7 @@ public class MonitorCatalogo {
                 System.out.println("la ejecucion fue interrumpida");
             }
         }
-        
+
         System.out.println("COMPROBACIÓN FINALIZADA");
     }
 }
