@@ -1,7 +1,7 @@
 # Reto 1 · Monitor del catálogo de UDITflix
 
 **Módulo:** 0490 · Programación de Servicios y Procesos
-**Autor/a:** (tu nombre)
+**Autor/a:** Lucas
 **Reto:** ☒ Reto A (vídeos) · ☐ Reto B (contenidos)
 **Tecnología:** Java + ProcessBuilder (procesos del sistema operativo)
 **RA vinculado:** RA1 · Programación de aplicaciones compuestas por varios procesos
@@ -123,10 +123,10 @@ La píldora lanzaba un proceso. El reto lanza cinco.
 
 **Dificultad 1:**
 
-- Qué síntoma vi:
-- Cuál era la causa real:
-- Cómo la encontré:
-- Cómo evitaré que me vuelva a pasar:
+- Qué síntoma vi: no sabia muy bien como empezar
+- Cuál era la causa real: me bloquee
+- Cómo la encontré:centrandome
+- Cómo evitaré que me vuelva a pasar:intentar no bloquearme
 
 **Dificultad 2:** (opcional)
 
@@ -144,9 +144,9 @@ La píldora lanzaba un proceso. El reto lanza cinco.
 | Qué hay en cada posición de la matriz | ☐ | ☐ | ☐ |
 | Qué hace el `for` en mi programa | ☐ | ☐ | ☐ |
 
-- **Mi predicción del principio, ¿acerté?** (escribe aquí y explica por qué sí o por qué no)
-- **Lo que haría diferente si empezara de nuevo:** (escribe aquí)
-- **Lo que todavía no tengo claro y quiero preguntar en clase:** (escribe aquí)
+- **Mi predicción del principio, ¿acerté?** si porque mas o menos sabia como acababa
+- **Lo que haría diferente si empezara de nuevo:** ordenaria distinto el codigo
+- **Lo que todavía no tengo claro y quiero preguntar en clase:** alguno de los codigos lo que hace
 
 ---
 
