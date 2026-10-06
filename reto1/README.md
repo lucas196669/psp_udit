@@ -136,13 +136,13 @@ La píldora lanzaba un proceso. El reto lanza cinco.
 
 | Puedo explicar a un compañero... | 🔴 No | 🟡 Más o menos | 🟢 Sí |
 |---|:-:|:-:|:-:|
-| Qué hace `ProcessBuilder` | ☐ | ☐ | ☐ |
-| Qué hace `start()` y por qué no espera | ☐ | ☐ | ☐ |
+| Qué hace `ProcessBuilder` | ☐ | ☐ | si |
+| Qué hace `start()` y por qué no espera | ☐ | mas o menos | ☐ |
 | Qué representa el PID | ☐ | ☐ | ☐ |
-| Para qué sirve `getInputStream()` | ☐ | ☐ | ☐ |
-| Qué hace `waitFor()` y qué devuelve | ☐ | ☐ | ☐ |
-| Qué hay en cada posición de la matriz | ☐ | ☐ | ☐ |
-| Qué hace el `for` en mi programa | ☐ | ☐ | ☐ |
+| Para qué sirve `getInputStream()` | ☐ | ☐ | si |
+| Qué hace `waitFor()` y qué devuelve | ☐ | ☐ | si |
+| Qué hay en cada posición de la matriz | ☐ | ☐ | si|
+| Qué hace el `for` en mi programa | ☐ | ☐ | si |
 
 - **Mi predicción del principio, ¿acerté?** si porque mas o menos sabia como acababa
 - **Lo que haría diferente si empezara de nuevo:** ordenaria distinto el codigo
