@@ -263,6 +263,31 @@ Entraría en el `catch (IOException e)` si Java no consigue ni arrancar el proce
 - Lo que todavía no tengo claro y quiero preguntar en clase: Exlicar mejor el waitFor
 
 ---
+---
+
+## 🔁 Reto B · Tolerancia a fallos (Patrón Retry)
+
+### 1. Mundo real: ¿qué sistemas usan el patrón Retry?
+
+Lo usan casi todos los sistemas que dependen de algo externo que puede fallar un momento. Por ejemplo:
+
+- **Pasarelas de pago** (como Stripe o PayPal): si el cobro falla por un microcorte de red, se reintenta antes de decirle al cliente que no ha funcionado. Aquí hay que tener cuidado de no cobrar dos veces, así que se usa un identificador único por operación.
+- **Servicios en la nube como AWS**: sus SDK reintentan solos las peticiones que fallan por errores temporales, esperando un poco más en cada intento (backoff).
+- **Sistemas de monitorización**: no mandan la alerta al primer fallo, sino cuando el servidor sigue sin responder tras varios intentos. Es justo lo que hace mi programa: evita falsas alarmas.
+- **Apps con base de datos o APIs**: si la conexión falla al arrancar, reintentan en vez de caerse.
+
+Solo tiene sentido reintentar errores temporales (cortes, timeouts). Un error que va a fallar siempre, como una contraseña incorrecta, no se arregla reintentando.
+
+### 2. Reflexión sobre mis tiempos
+
+Mis tiempos medidos fueron:
+
+- Con 1 servidor caído y sin espera entre intentos: unos **12 s** (3 s del primer ping + 3 reintentos de 3 s).
+- Con el `Thread.sleep(1000)` entre intentos: unos **15 s** (3 s + 3 × (1 s de espera + 3 s de timeout)).
+
+Si tuviera que auditar 50 servidores con problemas de conexión y los revisara uno detrás de otro, serían unos 50 × 15 s = 750 s, más de **12 minutos**. Por eso es importante limitar los reintentos: si no hubiera límite, la auditoría podría no acabar nunca, porque un servidor caído seguiría fallando y bloquearía al resto. Además, reintentar sin parar satura una red que ya va mal y gasta recursos del equipo.
+
+Hay que buscar un equilibrio: suficientes reintentos para no dar falsas alarmas, pero pocos para que el programa no se eternice. Y para muchos servidores, lo mejor sería comprobarlos en paralelo, como hice en el Reto 2, en vez de uno a uno.
 
 ## 📂 Estructura del proyecto
 
